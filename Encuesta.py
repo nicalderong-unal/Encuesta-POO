@@ -23,21 +23,7 @@ class Encuesta:
         for estudiante in self.respuestas:
             print(estudiante)
 
-    def resumen(self):
-        print("\n--------------------------------------\n|    Conocimiento de librerias de python    |\n--------------------------------------\n")
-        conteo_proyectos={}
-        conoce_lib={"sí": 0, "no": 0}
-
-        for e in self.respuestas:
-
-            if e.libreria_python.lower().startswith("si"):
-                conoce_lib["sí"] += 1
-            else:
-                conoce_lib["no"] += 1
-
-        print(f"- Sí: {conoce_lib['sí']} estudiantes")
-        print(f"- No: {conoce_lib['no']} estudiantes")
-
+    #No aplica resumen
 
 class Estudiante:
     def __init__(self, nombre, edad, idea_proyecto, tiempo, libreria_python, motivacion):
@@ -68,7 +54,6 @@ def main():
         encuesta.agregar_respuesta()
 
     encuesta.mostrar_resultados()
-    encuesta.resumen()
 
 
 if __name__ == "__main__":
